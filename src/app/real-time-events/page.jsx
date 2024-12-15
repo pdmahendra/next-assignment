@@ -3,7 +3,10 @@ import React, { useEffect } from "react";
 import EventCard from "../components/EventCard";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { DatePickerForm } from "../components/CalenderComponent";
+import { CalendarForm } from "../../components/ui/Datepicker";
+
+import { SelectComponent } from "../../components/ui/SelectComponent";
+
 const RealTimeEventsPage = () => {
   useEffect(() => {
     AOS.init({
@@ -110,16 +113,15 @@ const RealTimeEventsPage = () => {
         </div>
       </div>
 
-      <div>
-        <DatePickerForm />
-      </div>
-
       <div className="mt-24">
         <div className="lg:flex justify-between">
           <h1 className="text-[#202020] text-4xl font-bold max-md:text-center">
             Today’s Events
           </h1>
-          <img src="./component.png" alt="image" className="max-lg:hidden" />
+          <div className="flex gap-4">
+            <CalendarForm />
+            <SelectComponent />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-16 mt-12">
