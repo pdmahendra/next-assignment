@@ -118,7 +118,7 @@ const RealTimeEventsPage = () => {
           <h1 className="text-[#202020] text-4xl font-bold max-md:text-center">
             Today’s Events
           </h1>
-          <div className="flex gap-4">
+          <div className="flex gap-4 max-md:pt-6">
             <CalendarForm />
             <SelectComponent />
           </div>
